@@ -114,25 +114,7 @@ This application demonstrates the following BullMQ concepts:
 
 #### Start infrastructure only (for development)
 ```bash
-./docker-start.sh start-infra
 npm run dev
-```
-
-#### Start full stack (production-like)
-```bash
-./docker-start.sh start-full
-```
-
-#### Using npm scripts
-```bash
-# Start infrastructure
-npm run docker:infra
-
-# Start full stack
-npm run docker:full
-
-# Start development environment
-npm run docker:dev
 ```
 
 ### Manual Setup
@@ -152,33 +134,6 @@ npm run dev
 npm run test
 ```
 
-### Docker Management
-
-#### Check service status
-```bash
-./docker-start.sh status-infra
-./docker-start.sh status-full
-```
-
-#### View logs
-```bash
-./docker-start.sh logs-infra
-./docker-start.sh logs-full
-./docker-start.sh logs redis
-```
-
-#### Stop services
-```bash
-./docker-start.sh stop-infra
-./docker-start.sh stop-full
-```
-
-#### Clean up
-```bash
-./docker-start.sh cleanup-infra
-./docker-start.sh cleanup-full
-```
-
 ## 📚 API Endpoints
 
 ### Health Check
@@ -195,27 +150,11 @@ npm run test
 
 ### Service URLs
 - **BullMQ Application**: http://localhost:3000
-- **BullBoard (Queue Monitoring)**: http://localhost:3001 (admin/admin123)
+- **BullBoard (Queue Monitoring)**: http://localhost:3000/admin/queues
 - **Redis Commander**: http://localhost:8081
 - **Redis Server**: localhost:6379
 
-### Docker Commands
-```bash
-# Test Docker setup
-./test-docker.sh
 
-# Start infrastructure
-./docker-start.sh start-infra
-
-# Start full stack
-./docker-start.sh start-full
-
-# View logs
-./docker-start.sh logs-infra
-
-# Stop services
-./docker-start.sh stop-infra
-```
 
 ### Job Management
 - `GET /api/jobs/:queueName` - Get jobs from a queue
@@ -412,25 +351,5 @@ Enable debug logging by setting `NODE_ENV=development` in your `.env` file.
 - Use Redis clustering for high availability
 - Implement queue partitioning for large workloads
 - Monitor system resources and adjust accordingly
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests for new functionality
-5. Submit a pull request
-
-## 📄 License
-
-This project is licensed under the MIT License.
-
-## 🙏 Acknowledgments
-
-- [BullMQ](https://github.com/taskforcesh/bullmq) - The Redis-based job queue library
-- [Redis](https://redis.io/) - The in-memory data structure store
-- [Express.js](https://expressjs.com/) - The web framework for Node.js
-
----
 
 **Happy Queue Processing! 🚀**

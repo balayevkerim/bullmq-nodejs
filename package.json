@@ -10,16 +10,7 @@
     "consumer": "node src/consumer.js",
     "scheduler": "node src/scheduler.js",
     "monitor": "node src/monitor.js",
-    "test": "node src/test-scenarios.js",
-    "docker:build": "docker build -t bullmq-app .",
-    "docker:run": "docker run -p 3000:3000 --name bullmq-app-container bullmq-app",
-    "docker:stop": "docker stop bullmq-app-container && docker rm bullmq-app-container",
-    "docker:infra": "docker-compose -f docker-compose.yml up -d",
-    "docker:infra:stop": "docker-compose -f docker-compose.yml down",
-    "docker:full": "docker-compose -f docker-compose.full.yml up -d",
-    "docker:full:stop": "docker-compose -f docker-compose.full.yml down",
-    "docker:dev": "docker-compose -f docker-compose.dev.yml up -d",
-    "docker:dev:stop": "docker-compose -f docker-compose.dev.yml down"
+    "test": "node src/test-scenarios.js"
   },
   "keywords": [
     "bullmq",
