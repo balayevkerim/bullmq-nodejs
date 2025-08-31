@@ -6,10 +6,6 @@
   "scripts": {
     "start": "node src/index.js",
     "dev": "nodemon src/index.js",
-    "producer": "node src/producer.js",
-    "consumer": "node src/consumer.js",
-    "scheduler": "node src/scheduler.js",
-    "monitor": "node src/monitor.js",
     "test": "node src/test-scenarios.js"
   },
   "keywords": [
@@ -18,8 +14,7 @@
     "queue",
     "job-processing"
   ],
-  "author": "Your Name",
-  "license": "MIT",
+  "author": "Karim Balayev",
   "dependencies": {
     "@bull-board/api": "^6.12.7",
     "@bull-board/express": "^6.12.7",
